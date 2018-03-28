@@ -14,6 +14,9 @@ var app = new Vue({
       toPage:function(page){
         document.location="#"+page;
       }
+    },
+    mounted(){
+      this.$el.style.display='';
     }
   })
 
