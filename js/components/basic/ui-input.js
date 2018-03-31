@@ -11,19 +11,14 @@ Vue.component('ui-input', {
         :style="style" 
         v-bind:value="value"     
         v-on:input="updateValue($event.target.value,$event)"
-        v-on:keypress="keyPress($event.target.value,$event)"
+        v-on:keyup.enter="keyPress($event.target.value,$event)"
         ></input>`,
     methods:{
         updateValue:function(value,$ev){
             this.$emit('input', value);
         },
         keyPress:function(value,$ev){
-            this.$emit('keypress', value);
-            document.title=$ev.code;
-            if ($ev.code=="Enter"){
-                this.$emit('enter', value);
-            }
-            
+            this.$emit('enter', value);
         },
     }
 
