@@ -45,9 +45,9 @@
 <body >
 <span id="app" style="display:none">
 
-			<ui-block align="center">
-                <ui-input v-model="text" padding="8px" @enter="addItem()" placeholder="Enter text" ></ui-input>
-                <ui-button icon="fa-plus" fontSize="1rem" @click="addItem()" iconSize="1rem"></ui-button>
+			<ui-block align="center" margin="6px">
+                <ui-input v-model="text" padding="8px" @keypress="debug.push(arguments[0])" @enter="addItem()" placeholder="Enter text" ></ui-input>
+                <ui-button icon="fa-plus" padding="8px" fontSize="1rem" @click="addItem()" iconSize="1rem"></ui-button>
             </ui-block>
             
             <ui-block align="center">

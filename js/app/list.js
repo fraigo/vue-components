@@ -10,15 +10,19 @@ var app = new Vue({
       hash:'',
       text:'',
       list:[],
+      debug:[]
     },
     methods:{
       toPage:function(page){
         document.location="#"+page;
       },
       addItem:function(){
-          this.list.push(this.text);
-          this.text="";
-          this.saveItems();
+        var pos=this.list.indexOf(this.text);
+        if (pos==-1){
+            this.list.push(this.text);
+        }
+        this.text="";
+        this.saveItems();
       },
       deleteItem:function(item){
           var pos=this.list.indexOf(item);

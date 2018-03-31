@@ -18,6 +18,8 @@ Vue.component('ui-input', {
             this.$emit('input', value);
         },
         keyPress:function(value,$ev){
+            this.$emit('keypress', value);
+            document.title=$ev.code;
             if ($ev.code=="Enter"){
                 this.$emit('enter', value);
             }
