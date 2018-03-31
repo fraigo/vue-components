@@ -46,11 +46,12 @@
 <span id="app" style="display:none">
 
 			<ui-block align="center">
-				<ui-input v-model="text"  @enter="addItem()" placeholder="Enter text" ></ui-input>
+                <ui-input v-model="text" padding="8px" @enter="addItem()" placeholder="Enter text" ></ui-input>
+                <ui-button icon="fa-plus" fontSize="1rem" @click="addItem()" iconSize="1rem"></ui-button>
             </ui-block>
             
             <ui-block align="center">
-                <ui-chip v-for="item in list" @delete="">{{item}}</ui-chip>
+                <ui-chip v-for="item in list" @delete="deleteItem(item)">{{item}}</ui-chip>
 			</ui-block>
 
 </span>

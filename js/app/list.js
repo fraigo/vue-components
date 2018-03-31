@@ -9,7 +9,7 @@ var app = new Vue({
     data:{
       hash:'',
       text:'',
-      list:["Item"],
+      list:[],
     },
     methods:{
       toPage:function(page){
@@ -18,6 +18,10 @@ var app = new Vue({
       addItem:function(){
           this.list.push(this.text);
           this.text="";
+      },
+      deleteItem:function(item){
+          var pos=this.list.indexOf(item);
+          this.list.splice(pos,1);
       }
     },
     mounted(){
