@@ -6,21 +6,21 @@ Vue.component('ui-button', {
       },
       iconSize:{
         type:String,
-        default:"1.6rem",
+        default:"1rem",
       },
       fontSize:{
         type:String,
-        default:"1.2rem",
+        default:"1rem",
       },
       padding:{
         type:String,
-        default:"8px",
+        default:"1px",
       }
     },
     created:function(){
         
     },
     template:`
-  <button :id="id" :style="style" @click="$emit('click')"><ui-icon v-if="icon" :icon="icon" :style="{verticalAlign:'middle',fontSize:iconSize}"></ui-icon>&nbsp;<slot></slot></button>
+  <button :id="id" :style="style" @click="$emit('click')"><ui-icon v-if="icon" :icon="icon" :style="{verticalAlign:'middle',fontSize:iconSize,paddingLeft:'3px'}"></ui-icon><slot></slot></button>
       `
     })
