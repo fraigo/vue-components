@@ -17,6 +17,9 @@ var app = new Vue({
         document.location="#"+page;
       },
       addItem:function(){
+        if (this.text==""){
+          return;
+        }
         var pos=this.list.indexOf(this.text);
         if (pos==-1){
             this.list.push(this.text);

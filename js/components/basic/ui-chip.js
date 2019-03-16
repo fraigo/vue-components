@@ -27,7 +27,7 @@ Vue.component('ui-chip', {
     template: `<div
         :id="id" 
         :style="style" 
-        ><slot></slot> <ui-icon @click="$emit('delete')" style="cursor:pointer" icon="fa-times">X</ui-icon></div>`,
+        ><slot></slot> <ui-icon @click="$emit('delete')" style="cursor:pointer;font-size:1.5em" icon="fa-times">X</ui-icon></div>`,
     methods:{
         
     }
